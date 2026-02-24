@@ -1,0 +1,281 @@
+﻿.header {
+  width: 100%;
+  min-height: 100dvh;
+  background-image: url(/02-Picture-Background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.8rem 0.6rem 1.2rem;
+  overflow: hidden;
+}
+
+.english {
+  font-family: "Roboto", sans-serif;
+}
+
+.header .changeLangBtnHeader {
+  position: fixed;
+  top: 10px;
+  right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.header .changeLangBtnHeader:hover .changeLangBtn {
+  opacity: 0.6;
+}
+
+.header .changeLangBtnHeader .changeLangBtn {
+  width: 5rem;
+}
+
+.header .changeLangBtnHeader h3 {
+  font-size: 0.9rem;
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  margin-left: 0.1rem;
+}
+
+.captureWrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: clamp(1.6rem, 5vh, 3.8rem);
+}
+
+.header .takingFrame {
+  width: clamp(17rem, 46vw, 25rem);
+  margin-bottom: 0.8rem;
+}
+
+.header .takingText {
+  width: clamp(16.4rem, 44vw, 23.7rem);
+}
+
+.header .takingBtn {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .takingBtn h2 {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1rem, 2.4vw, 1.4rem);
+  line-height: 1.2;
+  padding: 0 0.8rem;
+  font-family: "Vazirmatn", sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+.cameraViewport {
+  width: clamp(13.4rem, 36vw, 19.6rem);
+  height: clamp(13.6rem, 37vw, 20.4rem);
+  border-radius: 23px;
+  position: absolute;
+  top: clamp(4.4rem, 10vw, 5.2rem);
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+.header .cameraSection {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.switchCameraBtn {
+  border: 0;
+  outline: 0;
+  border-radius: 999px;
+  padding: 0.38rem 1rem;
+  background: rgba(255, 255, 255, 0.74);
+  font-size: 0.78rem;
+  font-family: "Vazirmatn", sans-serif;
+  color: #2c2c2c;
+  cursor: pointer;
+  margin-top: 0.15rem;
+}
+
+.switchCameraBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.cameraError,
+.requestError {
+  width: min(92vw, 24rem);
+  text-align: center;
+  font-family: "Vazirmatn", sans-serif;
+  font-size: 0.86rem;
+  color: #b01a1a;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.54);
+  margin-top: 0.45rem;
+}
+
+.actions {
+  width: min(100%, 24rem);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 0.8rem;
+  margin-top: 1.1rem;
+}
+
+.actions .ratakeBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.actions .ratakeBtn:hover {
+  opacity: 0.8;
+}
+
+.actions .ratakeBtn h2 {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(0.9rem, 2.2vw, 1.6rem);
+  line-height: 1.2;
+  margin: 0;
+  padding: 0 0.6rem;
+  font-family: "Vazirmatn", sans-serif;
+  text-align: center;
+}
+
+.actions .ratakeBtn img {
+  width: clamp(8rem, 22vw, 15.5rem);
+}
+
+.actions .generateBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.actions .generateBtn:hover {
+  opacity: 0.8;
+}
+
+.actions .generateBtn img {
+  width: clamp(8rem, 22vw, 15.5rem);
+}
+
+.actions .generateBtn h2 {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(0.9rem, 2.2vw, 1.6rem);
+  line-height: 1.2;
+  margin: 0;
+  padding: 0 0.6rem;
+  font-family: "Vazirmatn", sans-serif;
+  text-align: center;
+}
+
+.disabledBtn {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+@media (min-height: 680px) {
+  .captureWrap,
+  .takingBtn,
+  .actions {
+    transform: translateY(6%);
+  }
+}
+
+@media (min-height: 800px) {
+  .captureWrap,
+  .takingBtn,
+  .actions {
+    transform: translateY(10%);
+  }
+}
+
+@media (min-width: 800px) {
+  .header .changeLangBtnHeader .changeLangBtn {
+    width: 8rem;
+  }
+
+  .header .changeLangBtnHeader h3 {
+    font-size: 1rem;
+  }
+
+  .switchCameraBtn {
+    font-size: 0.95rem;
+    padding: 0.45rem 1.2rem;
+  }
+}
+
+@media (max-height: 700px) {
+  .captureWrap,
+  .takingBtn,
+  .actions {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 430px) and (min-height: 880px) {
+  .captureWrap {
+    margin-top: 2.9rem;
+  }
+
+  .header .takingFrame {
+    width: 20.2rem;
+  }
+
+  .cameraViewport {
+    width: 15.95rem;
+    height: 16.2rem;
+    top: 4.55rem;
+  }
+
+  .header .takingText {
+    width: 19.4rem;
+  }
+
+  .actions {
+    transform: translateY(0);
+    margin-top: 1.35rem;
+    gap: 0.95rem;
+  }
+
+  .actions .generateBtn img,
+  .actions .ratakeBtn img {
+    width: 7.8rem;
+  }
+
+  .actions .generateBtn h2,
+  .actions .ratakeBtn h2 {
+    font-size: 0.95rem;
+  }
+}

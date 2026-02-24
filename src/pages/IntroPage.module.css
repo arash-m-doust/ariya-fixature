@@ -1,0 +1,183 @@
+﻿.header {
+  width: 100%;
+  min-height: 100dvh;
+  background-color: #894abf;
+  background-image: url(/01-Intro-Background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem 0;
+  overflow: hidden;
+}
+
+.header .changeLangBtnHeader {
+  position: fixed;
+  top: 10px;
+  right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.header .changeLangBtnHeader:hover .changeLangBtn {
+  opacity: 0.6;
+}
+
+.header .changeLangBtnHeader .changeLangBtn {
+  width: 5rem;
+}
+
+.header .changeLangBtnHeader h3 {
+  font-size: 0.9rem;
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  margin-left: 0.1rem;
+}
+
+.english {
+  font-family: "Roboto", sans-serif;
+}
+
+.persian {
+  font-family: "Vazirmatn", sans-serif;
+}
+
+.introTextWrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: clamp(21rem, 30vh, 42rem);
+  margin-left: clamp(-2.5rem, -1vw, -0.8rem);
+}
+
+.header .introText {
+  width: clamp(15.5rem, 44vw, 34rem);
+}
+
+.header p {
+  color: #000000;
+  font-weight: bold;
+  position: absolute;
+  width: 88%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(0.7rem, 1.8vw, 1.5rem);
+  text-align: center;
+  margin: 0;
+}
+
+.header .lion {
+  width: clamp(15.1rem, 35vw, 27rem);
+  margin-left: clamp(2.5rem, 14vw, 12.5rem);
+  padding-bottom: clamp(16rem, 25vh, 40rem);
+  margin-top: -0.8rem;
+}
+
+.header .headerStartBtn {
+  width: clamp(8.1rem, 18vw, 14.6rem);
+  height: clamp(5.8rem, 14vw, 9.9rem);
+  border-radius: 12px;
+  position: absolute;
+  cursor: pointer;
+  margin-left: clamp(9.5rem, 26vw, 25rem);
+  margin-top: clamp(-5.3rem, -3.8vh, -3.7rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .headerStartBtn:hover h2 {
+  opacity: 0.6;
+  transform: translateX(10px);
+}
+
+.header h2 {
+  color: #000000;
+  transition: 0.3s;
+  margin-top: 2.6rem;
+  margin-left: 0;
+}
+
+@media (min-width: 600px) {
+  .header h2 {
+    margin-top: 1.4rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .header h2 {
+    margin-top: -1.1rem;
+  }
+
+  .header .headerStartBtn h2 {
+    font-size: 2.3rem;
+  }
+
+  .header .changeLangBtnHeader .changeLangBtn {
+    width: 8rem;
+  }
+
+  .header .changeLangBtnHeader h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-height: 1300px) {
+  .header .lion {
+    width: 23rem;
+    margin-left: 7rem;
+  }
+
+  .introTextWrap {
+    margin-top: 42rem;
+    margin-left: -0.9rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .header {
+    background-position: bottom;
+  }
+}
+
+@media screen and (max-width: 430px) and (min-height: 880px) {
+  .introTextWrap {
+    margin-top: 22.2rem;
+    margin-left: -0.85rem;
+  }
+
+  .header .introText {
+    width: 15.8rem;
+  }
+
+  .header p {
+    width: 87%;
+    font-size: 0.84rem;
+  }
+
+  .header .lion {
+    width: 15.25rem;
+    margin-left: 2.7rem;
+    padding-bottom: 20.7rem;
+    margin-top: -0.4rem;
+  }
+
+  .header .headerStartBtn {
+    width: 8.2rem;
+    height: 5.9rem;
+    margin-left: 9.6rem;
+    margin-top: -5rem;
+  }
+
+  .header h2 {
+    margin-top: 2.3rem;
+  }
+}

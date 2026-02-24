@@ -1,0 +1,264 @@
+﻿.header {
+  width: 100%;
+  min-height: 100dvh;
+  background-size: cover;
+  background-image: url(/04-Result-Background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.6rem;
+  overflow: hidden;
+}
+
+.english {
+  font-family: "Roboto", sans-serif;
+}
+
+.header .changeLangBtnHeader {
+  position: fixed;
+  top: 10px;
+  right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.header .changeLangBtnHeader:hover .changeLangBtn {
+  opacity: 0.6;
+}
+
+.header .changeLangBtnHeader .changeLangBtn {
+  width: 5rem;
+}
+
+.header .changeLangBtnHeader h3 {
+  font-size: 0.9rem;
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  margin-left: 0.1rem;
+}
+
+.secondHeader {
+  position: fixed;
+  top: clamp(12%, 21vh, 25%);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.2rem, 8vh, 13rem);
+  align-items: center;
+}
+
+.neonFrame {
+  width: clamp(16.7rem, 43vw, 29.7rem);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.neonFrame img {
+  width: 100%;
+  display: block;
+}
+
+.header .resultImg {
+  width: 92.5%;
+  height: 89%;
+  position: absolute;
+  top: 5.2%;
+  border-radius: 13px;
+  left: 3.7%;
+  background-color: rgba(128, 128, 128, 0.548);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header .downloadBtn,
+.reStartBtn {
+  border-radius: 13px;
+  border: 0;
+  outline: none;
+  color: rgb(0, 0, 0);
+  font-family: "Vazirmatn", sans-serif;
+  font-size: 1.1rem;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .btnHeader {
+  margin-left: 0.2rem;
+  display: flex;
+  gap: clamp(0.5rem, 1.5vw, 1.1rem);
+}
+
+.header .downloadBtn {
+  position: relative;
+}
+
+.header .downloadBtn:hover {
+  opacity: 0.7;
+}
+
+.header .downloadBtn img {
+  width: clamp(7.5rem, 20vw, 14rem);
+}
+
+.header .downloadBtn h1 {
+  font-size: clamp(0.8rem, 1.8vw, 1.4rem);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+  padding: 0 0.65rem;
+  color: white;
+  font-family: "Vazirmatn", sans-serif;
+  text-align: center;
+}
+
+.header .reStartBtn {
+  position: relative;
+}
+
+.header .reStartBtn:hover {
+  opacity: 0.7;
+}
+
+.header .reStartBtn img {
+  width: clamp(7.5rem, 20vw, 14rem);
+}
+
+.header .reStartBtn h1 {
+  font-size: clamp(0.9rem, 1.9vw, 1.4rem);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+  padding: 0 0.65rem;
+  text-align: center;
+  color: white;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+.bigRestartBtn {
+  justify-content: center;
+}
+
+.header .messageHeader {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff75;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  transition: 0.3s;
+  animation: 0.5s moving ease-in-out;
+}
+
+.header .messageHeader div {
+  display: flex;
+  justify-content: center;
+  gap: 0.9rem;
+  flex-direction: column;
+  align-items: center;
+  width: 92%;
+}
+
+.header .messageHeader div h1 {
+  font-family: "Vazirmatn", sans-serif;
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
+  text-align: center;
+  color: #202020;
+}
+
+.header .messageHeader div h2 {
+  color: black;
+  font-weight: 300;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+}
+
+.qrImage {
+  width: clamp(6.3rem, 16vw, 10rem);
+  border-radius: 0.5rem;
+  background: #ffffff;
+  padding: 0.3rem;
+}
+
+@keyframes moving {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (min-height: 900px) {
+  .secondHeader {
+    top: 15%;
+  }
+}
+
+@media (min-width: 500px) {
+  .secondHeader {
+    top: 22%;
+  }
+}
+
+@media (min-width: 750px) {
+  .header .btnHeader {
+    margin-left: 1.1rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .header .changeLangBtnHeader .changeLangBtn {
+    width: 8rem;
+  }
+
+  .header .changeLangBtnHeader h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .secondHeader {
+    top: 18%;
+  }
+}
+
+@media screen and (max-width: 430px) and (min-height: 880px) {
+  .secondHeader {
+    top: 21%;
+    gap: 2.9rem;
+  }
+
+  .neonFrame {
+    width: 15.6rem;
+  }
+
+  .header .btnHeader {
+    margin-left: 0;
+    gap: 0.8rem;
+  }
+
+  .header .downloadBtn img,
+  .header .reStartBtn img {
+    width: 7.5rem;
+  }
+}

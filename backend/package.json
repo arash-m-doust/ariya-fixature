@@ -1,0 +1,17 @@
+﻿{
+  "name": "mirax-backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node generate.js",
+    "dev": "node generate.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "exceljs": "^4.4.0",
+    "express": "^4.21.2",
+    "qrcode": "^1.5.4",
+    "replicate": "^1.4.0"
+  }
+}

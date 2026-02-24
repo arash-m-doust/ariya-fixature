@@ -1,0 +1,138 @@
+﻿.header {
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/Loading.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  padding: 0.8rem;
+}
+
+.english {
+  font-family: "Roboto", sans-serif;
+}
+
+.persian {
+  font-family: "Vazirmatn", sans-serif;
+}
+
+.stage {
+  width: min(100%, 430px);
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: clamp(1rem, 5vh, 3rem);
+}
+
+.loaderWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video {
+  width: clamp(16rem, 44vw, 33rem);
+  display: block;
+}
+
+.percent {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: #388dc1;
+  text-shadow: 0 1px 9px #0000004a;
+  user-select: none;
+}
+
+.labelWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -0.6rem;
+}
+
+.textBox {
+  width: clamp(16rem, 40vw, 28rem);
+  display: block;
+}
+
+.labelText {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.25;
+  color: #656565;
+  font-size: clamp(1rem, 2.5vw, 1.9rem);
+  padding: 0 1.2rem;
+}
+
+.miraxImg {
+  width: clamp(11.7rem, 33vw, 23.7rem);
+  margin-top: -0.7rem;
+}
+
+@media (min-width: 740px) {
+  .miraxImg {
+    margin-left: 6rem;
+  }
+}
+
+@media (max-height: 680px) {
+  .stage {
+    padding-top: 0;
+  }
+
+  .video {
+    width: clamp(14rem, 35vw, 22rem);
+  }
+
+  .textBox {
+    width: clamp(14rem, 32vw, 21rem);
+  }
+
+  .miraxImg {
+    width: clamp(10rem, 24vw, 16rem);
+  }
+}
+
+@media screen and (max-width: 430px) and (min-height: 880px) {
+  .stage {
+    padding-top: 1.7rem;
+  }
+
+  .video {
+    width: 16.3rem;
+  }
+
+  .percent {
+    font-size: 3rem;
+  }
+
+  .textBox {
+    width: 16.25rem;
+  }
+
+  .labelText {
+    font-size: 1.03rem;
+    padding: 0 1.45rem;
+  }
+
+  .miraxImg {
+    width: 11.8rem;
+    margin-top: -0.9rem;
+    margin-left: 0;
+  }
+}
